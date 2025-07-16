@@ -1,15 +1,24 @@
 ﻿using Box2D.NET;
+using SharpDX.Direct3D9;
 
 namespace TRexGame.Plugins
 {
     public class Box2DTest
     {
         #region FIELDS
+        // Simulation control
+        private bool _update = true;
+        private float _time = 0.0f;
+        private const float _fixedDeltaTime = 1 / 60;
+
         // Stores the world handle
         private B2WorldId _worldId;
 
         // Stores the ground body
         private B2BodyId _groundId;
+
+        // Stores the dynamic body
+        private B2BodyId _bodyId;
         #endregion
 
         #region PRIVATE METHODS
@@ -32,10 +41,40 @@ namespace TRexGame.Plugins
             groundBodyDef.position = new B2Vec2(0.0f, -10.0f);
             _groundId = B2Bodies.b2CreateBody(_worldId, ref groundBodyDef);
 
-            B2Polygon _groundBox = B2Geometries.b2MakeBox(50.0f, 10.0f);
+            B2Polygon groundBox = B2Geometries.b2MakeBox(50.0f, 10.0f);
 
-            B2ShapeDef _groundShapeDef = B2Types.b2DefaultShapeDef();
-            B2Shapes.b2CreatePolygonShape(_groundId, ref _groundShapeDef, ref _groundBox);
+            B2ShapeDef groundShapeDef = B2Types.b2DefaultShapeDef();
+            B2Shapes.b2CreatePolygonShape(_groundId, ref groundShapeDef, ref groundBox);
+        }
+
+        private void CreateDynamicBody()
+        {
+            // DynamicBody must have a mass
+            // set to DynamicBody to respond to forces
+            // set position on creation to avoid lag - starting at origin or moving after is not good
+
+            B2BodyDef bodyDef = B2Types.b2DefaultBodyDef();
+            bodyDef.type = B2BodyType.b2_dynamicBody;
+            bodyDef.position = new B2Vec2(0.0f, 4.0f);
+            _bodyId = B2Bodies.b2CreateBody(_worldId, ref bodyDef);
+
+            B2Polygon dynamicBox = B2Geometries.b2MakeBox(1.0f, 1.0f);
+
+            B2ShapeDef shapeDef = B2Types.b2DefaultShapeDef();
+            shapeDef.density = 1.0f; // default is 1.0
+            shapeDef.material.friction = 0.3f;
+
+            B2Shapes.b2CreatePolygonShape(_bodyId, ref shapeDef, ref dynamicBox);
+        }
+
+        private void SimulateWorld()
+        {
+
+        }
+
+        private void Cleanup()
+        {
+            B2Worlds.b2DestroyWorld(_worldId);
         }
         #endregion
 
@@ -45,6 +84,17 @@ namespace TRexGame.Plugins
             CreateWorld();
             CreateGroundBox();
             CreateDynamicBody();
+
+            if (_update)
+            {
+                SimulateWorld();
+
+                if (_time > 10f)
+                {
+                    _update = false;
+                    Cleanup();
+                }
+            }
         }
         #endregion
     }

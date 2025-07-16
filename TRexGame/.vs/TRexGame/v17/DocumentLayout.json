@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\plugins\\box2dtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\trexgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\trexgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\engine\\physics\\gjk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\engine\\physics\\gjk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\gameentities\\trex\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\gameentities\\trex\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TRexGame.cs",
+              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
+              "RelativeDocumentMoniker": "TRexGame\\TRexGame.cs",
+              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
+              "RelativeToolTip": "TRexGame\\TRexGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T21:28:03.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GJK.cs",
+              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Physics\\GJK.cs",
+              "RelativeDocumentMoniker": "TRexGame\\Engine\\Physics\\GJK.cs",
+              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Physics\\GJK.cs",
+              "RelativeToolTip": "TRexGame\\Engine\\Physics\\GJK.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T16:07:18.207Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +62,14 @@
               "RelativeDocumentMoniker": "TRexGame\\Plugins\\Box2DTest.cs",
               "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Plugins\\Box2DTest.cs",
               "RelativeToolTip": "TRexGame\\Plugins\\Box2DTest.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-08T20:52:49.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TRex.cs",
               "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\GameEntities\\TRex\\TRex.cs",
               "RelativeDocumentMoniker": "TRexGame\\GameEntities\\TRex\\TRex.cs",
