@@ -40,9 +40,9 @@ namespace TRexGame.GameEntities.TRex.TRexStates.States
             return StateKey;
         }
 
-        public override void Update(GameTime gameTime)
+        public override void Update()
         {
-            base.Update(gameTime);
+            base.Update();
 
             if (_context.RectTransform.Position.Y >= _context.Rigidbody.GroundPos)
             {

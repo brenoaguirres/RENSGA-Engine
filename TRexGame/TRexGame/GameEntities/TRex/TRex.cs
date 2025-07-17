@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TRexGame.Engine.Entities;
 using TRexGame.Engine.Graphics;
 using TRexGame.Engine.Physics;
@@ -9,6 +9,7 @@ using TRexGame.Engine.Resources;
 using TRexGame.GameEntities.TRex.Input;
 using TRexGame.GameEntities.TRex.TRexStates;
 using Entities = TRexGame.Engine.Entities;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.GameEntities.TRex
 {
@@ -112,13 +113,14 @@ namespace TRexGame.GameEntities.TRex
 
         }
         public override void Start() { }
-        public override void Update(GameTime gameTime)
+        public override void FixedUpdate() { }
+        public override void Update()
         {
-            Rigidbody.UpdatePhysics(gameTime);
-            Input.UpdateInputs(gameTime);
-            StateMachine.UpdateStateMachine(gameTime);
-            Animator.UpdateAnimator(gameTime);
-            AudioSource.UpdateAudioSource(gameTime);
+            Rigidbody.UpdatePhysics();
+            Input.UpdateInputs();
+            StateMachine.UpdateStateMachine();
+            Animator.UpdateAnimator();
+            AudioSource.UpdateAudioSource();
         }
         public override void OnRenderEntity() { }
         public override void Draw(SpriteBatch spriteBatch, GameTime gameTime)

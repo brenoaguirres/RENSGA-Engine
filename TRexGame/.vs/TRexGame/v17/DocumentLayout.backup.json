@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\plugins\\box2dtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\plugins\\box2dtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\trexgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\trexgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\engine\\physics\\gjk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\engine\\physics\\gjk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\engine\\entities\\entitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\engine\\entities\\entitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\gameentities\\trex\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\gameentities\\trex\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|c:\\users\\breno\\documents\\github\\monogame\\trexgame\\trexgame\\engine\\tools\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{308BE2A6-DE31-4B9F-8248-7AF26CCFEE3B}|TRexGame\\TRexGame.csproj|solutionrelative:trexgame\\engine\\tools\\time.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TRexGame.cs",
-              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
-              "RelativeDocumentMoniker": "TRexGame\\TRexGame.cs",
-              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
-              "RelativeToolTip": "TRexGame\\TRexGame.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EntityManager.cs",
+              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Entities\\EntityManager.cs",
+              "RelativeDocumentMoniker": "TRexGame\\Engine\\Entities\\EntityManager.cs",
+              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Entities\\EntityManager.cs",
+              "RelativeToolTip": "TRexGame\\Engine\\Entities\\EntityManager.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAywGMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-16T21:28:03.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GJK.cs",
-              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Physics\\GJK.cs",
-              "RelativeDocumentMoniker": "TRexGame\\Engine\\Physics\\GJK.cs",
-              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Physics\\GJK.cs",
-              "RelativeToolTip": "TRexGame\\Engine\\Physics\\GJK.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T16:07:18.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Box2DTest.cs",
-              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Plugins\\Box2DTest.cs",
-              "RelativeDocumentMoniker": "TRexGame\\Plugins\\Box2DTest.cs",
-              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Plugins\\Box2DTest.cs",
-              "RelativeToolTip": "TRexGame\\Plugins\\Box2DTest.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAwwEgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T20:52:49.662Z",
+              "WhenOpened": "2025-07-17T21:16:25.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Time.cs",
+              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Tools\\Time.cs",
+              "RelativeDocumentMoniker": "TRexGame\\Engine\\Tools\\Time.cs",
+              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\Engine\\Tools\\Time.cs",
+              "RelativeToolTip": "TRexGame\\Engine\\Tools\\Time.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T20:54:00.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "TRex.cs",
               "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\GameEntities\\TRex\\TRex.cs",
               "RelativeDocumentMoniker": "TRexGame\\GameEntities\\TRex\\TRex.cs",
               "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\GameEntities\\TRex\\TRex.cs",
               "RelativeToolTip": "TRexGame\\GameEntities\\TRex\\TRex.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwGgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAUwHUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T19:12:31.479Z"
+              "WhenOpened": "2025-07-17T20:15:05.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TRexGame.cs",
+              "DocumentMoniker": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
+              "RelativeDocumentMoniker": "TRexGame\\TRexGame.cs",
+              "ToolTip": "C:\\Users\\Breno\\Documents\\GitHub\\Monogame\\TRexGame\\TRexGame\\TRexGame.cs",
+              "RelativeToolTip": "TRexGame\\TRexGame.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAA1wDQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T19:55:14.264Z",
+              "EditorCaption": ""
             }
           ]
         }

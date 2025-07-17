@@ -3,7 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using TRexGame.Engine.Entities;
 using TRexGame.Engine.Resources;
+using TRexGame.Engine.Tools;
 using TRexGame.GameEntities.TRex;
+using TRexGame.Plugins;
 
 namespace TRexGame
 {
@@ -20,6 +22,7 @@ namespace TRexGame
         private GameResources _gameResources;
 
         private TRex _tRex;
+        private Box2DTest _physicsTest = new();
         #endregion
 
         #region CONSTRUCTOR
@@ -60,10 +63,10 @@ namespace TRexGame
             EntityManager.Instance.InstantiationStage();
             EntityManager.Instance.AwakeStage();
             EntityManager.Instance.StartStage();
-            // missing animation, draw and physics stages
+            // missing animation stage
+            EntityManager.Instance.FixedUpdateStage();
             EntityManager.Instance.UpdateStage(gameTime);
             EntityManager.Instance.CleanupStage();
-
             base.Update(gameTime);
         }
 

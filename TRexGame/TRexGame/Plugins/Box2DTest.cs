@@ -1,5 +1,6 @@
 ﻿using Box2D.NET;
-using SharpDX.Direct3D9;
+using System.Diagnostics;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.Plugins
 {
@@ -8,8 +9,7 @@ namespace TRexGame.Plugins
         #region FIELDS
         // Simulation control
         private bool _update = true;
-        private float _time = 0.0f;
-        private const float _fixedDeltaTime = 1 / 60;
+        private int _subStepCount = 4;
 
         // Stores the world handle
         private B2WorldId _worldId;
@@ -69,7 +69,11 @@ namespace TRexGame.Plugins
 
         private void SimulateWorld()
         {
+            B2Worlds.b2World_Step(_worldId, (float)Time.FixedDeltaTime, _subStepCount);
+            B2Vec2 position = B2Bodies.b2Body_GetPosition(_bodyId);
+            B2Rot rotation = B2Bodies.b2Body_GetRotation(_bodyId);
 
+            Debug.WriteLine($"{position.X} {position.Y} {B2MathFunction.b2Rot_GetAngle(rotation)}");
         }
 
         private void Cleanup()
@@ -79,17 +83,19 @@ namespace TRexGame.Plugins
         #endregion
 
         #region PUBLIC METHODS
-        public void RunSimulation()
+        public void InitSimulation()
         {
             CreateWorld();
             CreateGroundBox();
             CreateDynamicBody();
-
+        }
+        public void RunSimulation()
+        {
             if (_update)
             {
                 SimulateWorld();
 
-                if (_time > 10f)
+                if (Time.TimeSinceStart > 1f)
                 {
                     _update = false;
                     Cleanup();

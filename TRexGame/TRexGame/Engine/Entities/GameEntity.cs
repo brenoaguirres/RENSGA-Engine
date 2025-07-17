@@ -87,7 +87,8 @@ namespace TRexGame.Engine.Entities
 
         public abstract void Awake();
         public abstract void Start();
-        public abstract void Update(GameTime gameTime);
+        public abstract void FixedUpdate();
+        public abstract void Update();
         public abstract void OnRenderEntity();
         public abstract void Draw(SpriteBatch spriteBatch, GameTime gameTime);
         public abstract void OnDestroy();

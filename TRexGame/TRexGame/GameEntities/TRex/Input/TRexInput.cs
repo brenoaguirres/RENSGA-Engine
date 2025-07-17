@@ -26,7 +26,7 @@ namespace TRexGame.GameEntities.TRex.Input
         #endregion
 
         #region PUBLIC METHODS
-        public void UpdateInputs(GameTime gameTime)
+        public void UpdateInputs()
         {
             KeyboardState keyboardState = Keyboard.GetState();
 

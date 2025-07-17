@@ -5,6 +5,7 @@ using TRexGame.Engine.Graphics;
 using TRexGame.Engine.Entities;
 using System;
 using System.Drawing;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.GameEntities.TRex
 {
@@ -45,7 +46,7 @@ namespace TRexGame.GameEntities.TRex
         #endregion
 
         #region PRIVATE METHODS
-        private void AnimateIdleState(GameTime gameTime, TRexGraphics graphics)
+        private void AnimateIdleState(TRexGraphics graphics)
         {
             if (_idleTimer <= 0)
             {
@@ -64,29 +65,29 @@ namespace TRexGame.GameEntities.TRex
             }
             else
             {
-                _idleTimer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                _idleTimer -= (float)Time.DeltaTime;
             }
         }
-        private void AnimateRunState(GameTime gameTime, TRexGraphics graphics)
+        private void AnimateRunState(TRexGraphics graphics)
         {
             if (!IsPlaying || CurrentAnimation != graphics.RunAnimation) 
                 Play(graphics.RunAnimation);
         }
-        private void AnimateJumpState(GameTime gameTime, TRexGraphics graphics)
+        private void AnimateJumpState(TRexGraphics graphics)
         {
             if (!_jumpStart)
             {
-                BeginJumpAnimation(gameTime, graphics);
+                BeginJumpAnimation(graphics);
                 return;
             }
-            ContinueJumpAnimation(gameTime, graphics);
+            ContinueJumpAnimation(graphics);
         }
-        private void AnimateDuckState(GameTime gameTime, TRexGraphics graphics)
+        private void AnimateDuckState(TRexGraphics graphics)
         {
             if (!IsPlaying || CurrentAnimation != graphics.DuckAnimation)
                 Play(graphics.DuckAnimation);
         }
-        private void AnimateFallState(GameTime gameTime, TRexGraphics graphics)
+        private void AnimateFallState(TRexGraphics graphics)
         {
             Play(graphics.FallAnimation);
             _jumpStart = false;
@@ -94,13 +95,13 @@ namespace TRexGame.GameEntities.TRex
         #endregion
 
         #region ANIMATION HELPERS
-        private void BeginJumpAnimation(GameTime gameTime, TRexGraphics graphics)
+        private void BeginJumpAnimation(TRexGraphics graphics)
         {
             _jumpStart = true;
             Play(graphics.BeginJumpAnimation);
         }
 
-        private void ContinueJumpAnimation(GameTime gameTime, TRexGraphics graphics)
+        private void ContinueJumpAnimation(TRexGraphics graphics)
         {
             if (_jumpStart && !IsPlaying)
                 Play(graphics.JumpAnimation);
@@ -129,7 +130,7 @@ namespace TRexGame.GameEntities.TRex
         #endregion
 
         #region PUBLIC METHODS
-        public override void UpdateStates(GameTime gameTime)
+        public override void UpdateStates()
         {
             TRexGraphics graphics = Graphics as TRexGraphics;
 
@@ -137,19 +138,19 @@ namespace TRexGame.GameEntities.TRex
             {
                 default:
                 case ETRexState.IDLE:
-                    AnimateIdleState(gameTime, graphics);
+                    AnimateIdleState(graphics);
                     break;
                 case ETRexState.RUN:
-                    AnimateRunState(gameTime, graphics);
+                    AnimateRunState(graphics);
                     break;
                 case ETRexState.JUMP:
-                    AnimateJumpState(gameTime, graphics);
+                    AnimateJumpState(graphics);
                     break;
                 case ETRexState.DUCK:
-                    AnimateDuckState(gameTime, graphics);
+                    AnimateDuckState(graphics);
                     break;
                 case ETRexState.FALL:
-                    AnimateFallState(gameTime, graphics);
+                    AnimateFallState(graphics);
                     break;
             }
         }

@@ -46,7 +46,7 @@ namespace TRexGame.GameEntities.TRex.TRexStates
             CurrentState.Enter();
 
         }
-        public void UpdateStateMachine(GameTime gameTime)
+        public void UpdateStateMachine()
         {
             ETRexState state = CurrentState.CheckTransitions();
             if (state != CurrentState.StateKey)
@@ -55,7 +55,7 @@ namespace TRexGame.GameEntities.TRex.TRexStates
                 return;
             }
             
-            CurrentState.Update(gameTime);
+            CurrentState.Update();
         }
         #endregion
     }

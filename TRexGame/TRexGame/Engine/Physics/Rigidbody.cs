@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Entities = TRexGame.Engine.Entities;
 using TRexGame.Engine.Graphics;
 using System.Diagnostics;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.Engine.Physics
 {
@@ -44,12 +45,12 @@ namespace TRexGame.Engine.Physics
         #endregion
 
         #region PRIVATE METHODS
-        private void ApplyGravity(GameTime gameTime)
+        private void ApplyGravity()
         {
             if (_transform.Position.Y > _startingGroundPos) return;
             if (!_useGravity || _isKinematic) return;
 
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float deltaTime = (float)Time.DeltaTime;
 
             _cumulativeAcceleration += _mass * _gravityScale * deltaTime;
 
@@ -58,9 +59,9 @@ namespace TRexGame.Engine.Physics
                 _linearVelocity.Y + _cumulativeAcceleration
             );
         }
-        private void ApplyVelocity(GameTime gameTime)
+        private void ApplyVelocity()
         {
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            float deltaTime = (float)Time.DeltaTime;
             Vector2 movement = new Vector2(_linearVelocity.X * deltaTime, _linearVelocity.Y * deltaTime);
 
             _transform.Position = new Vector2(
@@ -85,10 +86,10 @@ namespace TRexGame.Engine.Physics
         {
             _transform = _myGameEntity.GetComponent<RectTransform>();
         }
-        public void UpdatePhysics(GameTime gameTime)
+        public void UpdatePhysics()
         {
-            ApplyGravity(gameTime);
-            ApplyVelocity(gameTime);
+            ApplyGravity();
+            ApplyVelocity();
             CheckCollisions();
         }
         #endregion

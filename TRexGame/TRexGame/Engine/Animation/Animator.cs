@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TRexGame.Engine.Entities;
 using TRexGame.Engine.Graphics;
+using TRexGame.Engine.Tools;
 using TRexGame.GameEntities.TRex;
 using Entities = TRexGame.Engine.Entities;
 
@@ -39,13 +40,13 @@ namespace TRexGame.Engine.Animation
         #endregion
 
         #region PUBLIC METHODS
-        public virtual void UpdateStates(GameTime gameTime)
+        public virtual void UpdateStates()
         {
 
         }
-        public void UpdateAnimator(GameTime gameTime)
+        public void UpdateAnimator()
         {
-            UpdateStates(gameTime);
+            UpdateStates();
             ValidateDefaultAnimation();
 
             if (IsPlaying)
@@ -64,7 +65,7 @@ namespace TRexGame.Engine.Animation
                 if (PlaybackTime >= CurrentAnimation.CurrentFrameTimestamp + CurrentAnimation.TotalFrameTime)
                     _myRenderer.Sprite = CurrentAnimation.NextSprite();
 
-                PlaybackTime += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                PlaybackTime += (float)Time.DeltaTime;
             }
         }
 

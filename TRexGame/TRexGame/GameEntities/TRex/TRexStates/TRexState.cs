@@ -22,7 +22,7 @@ namespace TRexGame.GameEntities.TRex.TRexStates
 
         #region PUBLIC METHODS
         public virtual void Enter() { }
-        public virtual void Update(GameTime gameTime) { }
+        public virtual void Update() { }
         public virtual ETRexState CheckTransitions() 
         {
             return StateKey;

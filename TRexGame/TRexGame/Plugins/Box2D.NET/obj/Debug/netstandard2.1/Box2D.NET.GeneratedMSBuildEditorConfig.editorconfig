@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = Box2D.NET
-build_property.ProjectDir = C:\Users\Breno\Downloads\Box2D.NET-main\Box2D.NET-main\src\Box2D.NET\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 

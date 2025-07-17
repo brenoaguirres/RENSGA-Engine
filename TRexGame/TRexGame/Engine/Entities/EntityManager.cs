@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.Engine.Entities
 {
@@ -39,7 +40,8 @@ namespace TRexGame.Engine.Entities
         private Action OnAwake;
         private Action OnStart;
         private Action OnRenderEntity;
-        private Action<GameTime> OnUpdate;
+        private Action OnUpdate;
+        private Action OnFixedUpdate;
         #endregion
 
         #region PUBLIC METHODS
@@ -78,6 +80,7 @@ namespace TRexGame.Engine.Entities
 
                 _instance.OnAwake += entity.Awake;
                 _instance.OnStart += entity.Start;
+                _instance.OnFixedUpdate += entity.FixedUpdate;
                 _instance.OnUpdate += entity.Update;
                 _instance.OnRenderEntity += entity.OnRenderEntity;
             }
@@ -102,9 +105,18 @@ namespace TRexGame.Engine.Entities
 
             _startEntities.Clear();
         }
+        public void FixedUpdateStage()
+        {
+            Time.FixedUpdate();
+            if (Time.IsFixedUpdateFrame)
+            {
+                OnFixedUpdate?.Invoke();
+            }
+        }
         public void UpdateStage(GameTime gameTime)
         {
-            OnUpdate?.Invoke(gameTime);
+            OnUpdate?.Invoke();
+            Time.Update(gameTime);
         }
         public void RenderEntityStage(SpriteBatch spriteBatch, GameTime gameTime)
         {

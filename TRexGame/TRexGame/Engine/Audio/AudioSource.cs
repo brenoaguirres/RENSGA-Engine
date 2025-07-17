@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using TRexGame.Engine.Entities;
 using TRexGame.Engine.Graphics;
+using TRexGame.Engine.Tools;
 
 namespace TRexGame.Engine.Audio
 {
@@ -31,11 +32,11 @@ namespace TRexGame.Engine.Audio
         #endregion
 
         #region PUBLIC METHODS
-        public void UpdateAudioSource(GameTime gameTime)
+        public void UpdateAudioSource()
         {
             if (IsPlaying && _currentSfxPlayback <= _currentSfxDuration)
             {
-                _currentSfxPlayback += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                _currentSfxPlayback += (float)Time.DeltaTime;
             }
             else
             {
